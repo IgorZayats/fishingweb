@@ -1,0 +1,50 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Рибалка у Львові
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(href='css/sort-of-fish.css', rel='stylesheet', type='text/css')
+        link(href='css/weatherstatus.css', rel='stylesheet', type='text/css')
+        link(href='css/weather-block.css', rel='stylesheet', type='text/css')
+        link(rel='shortcut icon', href='images/favicon.jpg')
+        link(href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+    include layout.jade
+        block content
+            .divlist
+                ul
+                    li#fivedays.menu Погода на 5 днів
+                    li#sixteenthdays.menu Погода на 16 днів
+            #allweather
+                #city
+                #blockweather16(style='display:none')
+                    .input-container
+                        form#formCity16
+                            label(for='cityname16')  Погода на 16 днів
+                            input#inputCityName16(type='text', name='cityName16', placeholder='Введіть назву міста', required='')
+                            input#btnGetWeather16(type='button', value='Показати')
+                    #weather16
+                        a.control_next(href='#')
+                            img.arrows(src='icons/arrowright.png', width='50', height='50', alt='right arrow', title='Натисніть щоб перейти вперед')
+                        a.control_prev(href='#')
+                            img.arrows(src='icons/arrowleft.png', width='50', height='50', alt='left arrow', title='Натисніть щоб повернутись')
+                        ul#weatherTable16
+                #blockweather5(style='display:none')
+                    .input-container
+                        form#formCity5
+                            label(for='cityname5')  Погода на 5 днів
+                            input#inputCityName5(type='text', name='cityName5', placeholder='Введіть назву міста', required='')
+                            input#btnGetWeather5(type='button', value='Показати')
+                    #weather5
+                        a.control_next(href='#')
+                            img.arrows(src='icons/arrowright.png', width='50', height='50', alt='right arrow', title='Натисніть щоб перейти вперед')
+                        a.control_prev(href='#')
+                            img.arrows(src='icons/arrowleft.png', width='50', height='50', alt='left arrow', title='Натисніть щоб повернутись')
+                        ul#weatherTable5
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+        script(type='text/javascript', src='js/weather-drive.js')
+        script(type='text/javascript', src='js/weatherByCity5.js')
+        script(type='text/javascript', src='js/weatherByCity16.js')
+        script(type='text/javascript', src='js/moment.js')
+        include footer

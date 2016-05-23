@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+
+.text{color:white;
+position:absolute;
+width:650px;
+height:650px;
+font-size:16px;
+padding-left:150px;
+padding-top:50px;
+font-weight:600;font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;}
+

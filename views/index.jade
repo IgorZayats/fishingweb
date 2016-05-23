@@ -1,0 +1,131 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Рибалка у Львові
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(rel='shortcut icon', href='images/favicon.jpg')
+        link(href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', type='text/css', href='engine1/style.css')
+        script(type='text/javascript', src='engine1/jquery.js')
+    include layout.jade
+        block content
+        #wowslider-container1
+            .ws_images
+                ul
+                    li
+                        img#wows1_0(src='data1/images/chrysanthemum.jpg', alt='Chrysanthemum', title='Chrysanthemum')
+                    li
+                        img#wows1_1(src='data1/images/desert.jpg', alt='Desert', title='Desert')
+                    li
+                        img#wows1_2(src='data1/images/hydrangeas.jpg', alt='Hydrangeas', title='Hydrangeas')
+                    li
+                        img#wows1_3(src='data1/images/jellyfish.jpg', alt='Jellyfish', title='Jellyfish')
+                    li
+                        img#wows1_4(src='data1/images/koala.jpg', alt='Koala', title='Koala')
+                    li
+                        img#wows1_5(src='data1/images/lighthouse.jpg', alt='Lighthouse', title='Lighthouse')
+                    li
+                        a(href='http://wowslider.com')
+                            img#wows1_6(src='data1/images/penguins.jpg', alt='wowslider', title='Penguins')
+                    li
+                        img#wows1_7(src='data1/images/tulips.jpg', alt='Tulips', title='Tulips')
+            .ws_bullets
+                div
+                    a(href='#', title='Chrysanthemum')
+                        span
+                            img(src='data1/tooltips/chrysanthemum.jpg', alt='Chrysanthemum')
+                            | 1
+                    a(href='#', title='Desert')
+                        span
+                            img(src='data1/tooltips/desert.jpg', alt='Desert')
+                            | 2
+                    a(href='#', title='Hydrangeas')
+                        span
+                            img(src='data1/tooltips/hydrangeas.jpg', alt='Hydrangeas')
+                            | 3
+                    a(href='#', title='Jellyfish')
+                        span
+                            img(src='data1/tooltips/jellyfish.jpg', alt='Jellyfish')
+                            | 4
+                    a(href='#', title='Koala')
+                        span
+                            img(src='data1/tooltips/koala.jpg', alt='Koala')
+                            | 5
+                    a(href='#', title='Lighthouse')
+                        span
+                            img(src='data1/tooltips/lighthouse.jpg', alt='Lighthouse')
+                            | 6
+                    a(href='#', title='Penguins')
+                        span
+                            img(src='data1/tooltips/penguins.jpg', alt='Penguins')
+                            | 7
+                    a(href='#', title='Tulips')
+                        span
+                            img(src='data1/tooltips/tulips.jpg', alt='Tulips')
+                            | 8
+            .ws_script(style='position:absolute;left:-99%')
+                a(href='http://wowslider.net') wowslider.net
+                |  by WOWSlider.com v8.7
+            .ws_shadow
+        script(type='text/javascript', src='engine1/wowslider.js')
+        script(type='text/javascript', src='engine1/script.js')
+
+        #data.wrapper
+            ul#messages
+        form#publish
+            input(type='text', name='message', placeholder='Введіть повідомлення')
+            input(type='submit', value='Відправити')
+        form
+            input#userName(type='text', name='userName', placeholder='Введіть нікнейм')
+            input#btn(type='button', value='Відправити')
+        script(type='text/javascript').
+            publish.onsubmit =  function() {
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "/publish",true);
+                xhr.send(JSON.stringify({message:$('#userName').val()+ '  :  ' + this.elements.message.value}));
+                this.elements.message.value = '';
+                return false;
+            };
+            subscribe();
+            function subscribe(){
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "/subscribe",true);
+                xhr.onload = function(){
+                    var li = document.createElement('li');
+                    li.textContent = this.responseText;
+                    messages.appendChild(li);
+                    subscribe();
+                };
+                xhr.onerror = xhr.onabort = function () {
+                    setTimeout(subscribe, 500 );
+                };
+                xhr.send('');
+            }
+        script.
+            window.setInterval(function() {
+                var elem = document.getElementById('data');
+                elem.scrollTop = elem.scrollHeight;
+            }, 500);
+        script(type='text/javascript', src='js/sitedrive.js')
+        script(type='text/javascript', src='js/cloud-carousel.1.0.5.js')
+        script(type='text/javascript', src='js/jquery.mousewheel.js')
+        script.
+                $(document).ready(function () {
+                    $("#carousel").CloudCarousel({
+                        titleBox: $('#image_title'),
+                        altBox: $('#image_alt'),
+                        yRadius: 20,
+                        xRadius: -200,
+                        xPos: 250,
+                        yPos: 10,
+                        autoRotate: 'yes',
+                        autoRotateDelay: 5000,
+                        speed: 0.15,
+                        mouseWheel: true,
+                        minScale: 2,
+                        reflHeight: 0
+                    });
+                });
+        include footer
+

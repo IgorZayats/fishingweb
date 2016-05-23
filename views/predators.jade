@@ -1,0 +1,86 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Рибалка у Львові
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(href='css/sort-of-fish.css', rel='stylesheet', type='text/css')
+        link(rel='shortcut icon', href='images/favicon.jpg')
+        link(href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+    include layout.jade
+        block content
+.divlist
+                ul
+                    li.menu
+                        | Щука
+                        ul.submenu
+                            li#pike.subhover Про рибу
+                            li.subhover 1.2
+                            li.subhover 1.3
+                            li.subhover 1.4
+                            li.subhover 1.5
+                    li.menu
+                        | Окунь
+                        ul.submenu
+                            li#perch.subhover Про рибу
+                            li.subhover 2.2
+                            li.subhover 2.3
+                            li.subhover 2.4
+                            li.subhover 2.5
+                    li.menu
+                        | Судак
+                        ul.submenu
+                            li#sudak.subhover Про рибу
+                            li.subhover 3.2
+                            li.subhover 3.3
+                            li.subhover 3.4
+                            li.subhover 3.5
+                    li.menu
+                        | Голавль
+                        ul.submenu
+                            li#golavl.subhover Про рибу
+                            li.subhover 4.2
+                            li.subhover 4.3
+                            li.subhover 4.4
+                            li.subhover 4.5
+                    li.menu
+                        | Налим
+                        ul.submenu
+                            li#nalym.subhover Про рибу
+                            li.subhover 5.2
+                            li.subhover 5.3
+                            li.subhover 5.4
+                            li.subhover 5.5
+                    li.menu
+                        | Жерех
+                        ul.submenu
+                            li#zherekh.subhover Про рибу
+                            li.subhover 6.2
+                            li.subhover 6.3
+                            li.subhover 6.4
+                            li.subhover 6.5
+            script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+            script.
+                $(document).ready(function(){
+                    $("#pike").click(function(){
+                        $("#div1").load("content/pike.txt");
+                    });
+                    $("#perch").click(function(){
+                        $("#div1").load("content/perch.txt");
+                    });
+                    $("#sudak").click(function(){
+                        $("#div1").load("content/sudak.txt");
+                    });
+                    $("#golavl").click(function(){
+                        $("#div1").load("content/golavl.txt");
+                    });
+                    $("#nalym").click(function(){
+                        $("#div1").load("content/nalym.txt");
+                    });
+                    $("#zherekh").click(function(){
+                        $("#div1").load("content/zherekh.txt");
+                    });
+                });
+            #div1.div1
+            include footer

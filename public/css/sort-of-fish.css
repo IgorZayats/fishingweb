@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+
+.divlist{float:left;
+margin-top:30px;
+margin-left:15px;}
+li.menu ul.submenu{display:none;}
+li.menu:hover ul.submenu{display:block;}
+li.menu{z-index:5;
+	position:relative;
+    background-image:url(../images/oie_DrWYw74DOevd.png);
+text-align:center;
+padding-top:10px;
+color:white;
+width:153px;
+height:35px;
+font-weight:900;
+font-size:13px;
+font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+
+}
+.menu:hover{z-index:5;
+position:relative;
+ background-image:url(../images/oie_DrWYw74DOevd.png);
+background-position: 100% 100%;
+background-repeat:no-repeat;
+text-align:center;
+padding-top:10px;
+width:153px;
+height:35px;
+color:blue;
+font-weight:900;
+font-size:13px;
+font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;}
+
+.subhover{
+	z-index:5;
+	position:relative;
+    margin-top:-23px;
+margin-left:150px;
+    background-image:url(../images/oie_DrWYw74DOevd.png);
+    background-position: 100% 0%;
+background-repeat:no-repeat;
+text-align:center;
+padding-top:10px;
+color:white;
+width:153px;
+height:35px;
+margin-bottom:22px;
+font-weight:900;
+font-size:13px;
+font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;}
+.subhover:hover{z-index:5;
+	position:relative;
+margin-left:150px;
+     background-image:url(../images/oie_DrWYw74DOevd.png);
+    background-position: 100% 100%;
+background-repeat:no-repeat;
+text-align:center;
+padding-top:10px;
+color:blue;
+width:153px;
+height:35px;
+margin-bottom:22px;
+ margin-top:-24px;
+font-weight:900;
+font-size:13px;
+font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;}
+.div1{
+color:black;
+float:left;
+width:730px;
+height:700px;
+padding:5px;
+overflow-y:auto;}
+.gallery-image{display:inline-block;
+margin-left:5px;
+border-radius:10px;}
+.gallery-image:hover{border:3px solid red;
+width:224px;
+height:144px;border-radius:10px;}

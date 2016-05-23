@@ -1,0 +1,41 @@
+
+body
+    nav.fix-navbar
+        ul
+
+            li.logo
+             img(src='/icons/unnamed.png',width='70px', height='70px')
+             span.sitename GO fishing
+            li
+             a( href='/') Головна
+            li
+             a(href='lake') Озера
+            li
+             a(href='river') Річки
+            li.dropdown
+             a.dropbtn(href='#') Про рибу
+             .dropdown-content
+               a(href='peacefull')
+                 span.dropitems Мирна риба  &rarr;
+               a(href='predators')
+                 span.dropitems Хижа риба  &rarr;
+            li.dropdown
+             a.dropbtn(href='#') Погода
+             .dropdown-content
+               a(href='weather')
+                 span.dropitems 5 днів/3год
+               a(href='weather')
+                 span.dropitems 16 днів
+            li
+             a(href='#news') Календар
+            li
+             a(href='gallery-page') Галерея
+            li
+             a(href='#news') Форум
+            li
+             a(href='about') Про сайт
+    main.body
+
+
+
+            block content

@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Рибалка у Львові
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(href='css/every_river.css', rel='stylesheet', type='text/css')
+        link(href='css/sort-of-fish.css', rel='stylesheet', type='text/css')
+        link(rel='shortcut icon', href='images/favicon.jpg')
+        link(href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+    include layout.jade
+        block content
+            .divlist
+                ul
+                    li.menu Про річку
+                    li#gallery.menu Галерея
+            #carousel(title='Покрутіть колесо миші')
+                img#pike1.cloudcarousel(src='gallery/vereshcitsya/pike1.jpg', width='230', height='150', alt='Fishing')
+                img#pike2.cloudcarousel(src='gallery/vereshcitsya/pike2.jpg', width='230', height='150', alt='Fishing')
+                img#pike3.cloudcarousel(src='gallery/vereshcitsya/pike3.jpg', width='230', height='150', alt='Fishing')
+                img#pike4.cloudcarousel(src='gallery/vereshcitsya/pike4.jpg', width='230', height='150', alt='Fishing')
+                img#som.cloudcarousel(src='gallery/vereshcitsya/som.jpg', width='230', height='150', alt='Fishing')
+                img#som1.cloudcarousel(src='gallery/vereshcitsya/som1.jpg', width='230', height='150', alt='Fishing')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+        script(type='text/javascript', src='js/cloud-carousel.1.0.5.js')
+        script(type='text/javascript', src='js/jquery.mousewheel.js')
+        script(type='text/javascript', src='js/all_river_gallery.js')
+        script.
+            $(document).ready(function() {
+                $("#carousel").CloudCarousel({
+                    yRadius: 185,
+                    xRadius: 240,
+                    xPos: 275,
+                    yPos: 100,
+                    speed: 0.15,
+                    mouseWheel: true,
+                    autoRotate: 'yes',
+                    autoRotateDelay: 2000,
+                });
+            });
+        include footer

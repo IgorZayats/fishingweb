@@ -1,0 +1,21 @@
+﻿<div class="video-box">
+  <iframe width="300" height="300"
+src="http://www.youtube.com/embed/GuGz_GFe_P8" frameborder="" allowfullscreen>
+</iframe> 
+
+</div>
+<div class="video-box">Здесь располагается содержимое нового тега Div
+ <video width="300" height="280" controls >
+   <source src="https://www.youtube.com/watch?v=GuGz_GFe_P8">
+  </video>
+</div>
+<div class="video-box">Здесь располагается содержимое нового тега Div
+ <video width="300" height="280" controls >
+   <source src="https://www.youtube.com/watch?v=GuGz_GFe_P8">
+  </video>
+</div>
+<div class="video-box">Здесь располагается содержимое нового тега Div
+ <video width="300" height="280" controls >
+   <source src="https://www.youtube.com/watch?v=GuGz_GFe_P8">
+  </video>
+</div>

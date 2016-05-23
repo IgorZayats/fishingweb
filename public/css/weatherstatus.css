@@ -1,0 +1,89 @@
+@charset "utf-8";
+.brokenclouds04n04d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -320px -128px;
+}
+.lightrain10d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -320px -35px;
+}
+.skyisclear01d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -330px -880px;
+}
+.snow13d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -190px -40px;
+}
+.scatteredclouds03d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -48px -120px;
+}
+.lightrain10n {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -450px -896px;
+}
+.fewclouds02d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -200px -555px;
+}
+.fewclouds02n {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -330px -466px;
+}
+.thunderstorm11n11d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -450px -466px;
+}
+.heavyrain09d09n {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/icons.gif);
+    background-position: -450px -566px;
+}
+.fog50n50d {
+    width: 100px;
+    height: 95px;
+    position: absolute;
+    float: right;
+    background-image: url(../icons/fog.png);
+    background-size: contain;
+}

@@ -1,0 +1,69 @@
+@charset "utf-8";
+audio {
+    display: none;
+    width: 150px;
+    height: 20px;
+}
+#roks,
+#djfm,
+#renesans,
+#sharmanka,
+#transcentury,
+#comafm,
+#prostoradio,
+#mfm,
+#kissfm {
+    margin-top: 5px;
+    width: 50px;
+    height: 52px;
+    border-radius:10px;
+}
+#roks,
+#djfm,
+#renesans,
+#sharmanka,
+#transcentury,
+#comafm,
+#prostoradio,
+#mfm,
+#kissfm:hover {
+    margin-top: 5px;
+    width: 50px;
+    height: 52px;
+    border-radius:10px;
+}
+#roks>img,
+#djfm>img,
+#renesans>img,
+#sharmanka>img,
+#transcentury>img,
+#comafm>img,
+#prostoradio>img,
+#mfm>img,
+#kissfm>img {
+    margin-left: -6px;
+    width: 45px;
+    height: 45px;
+}
+#radiotable {
+    display: block;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 25px;
+    background-image: url(../images/mate.png);
+    border-radius: 15px;
+    color: white;
+}
+#radiotable td {
+    font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+    font-size:14px;
+    font-weight:900;
+    text-shadow: 2px 2px 2px black;
+}
+.radio-container {
+    margin-top: 1%;
+    float: right;
+    width: 100px;
+    height: 800px;
+}

@@ -1,0 +1,62 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Рибалка у Львові
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(href='css/sort-of-fish.css', rel='stylesheet', type='text/css')
+        link(rel='shortcut icon', href='images/favicon.jpg')
+        link(href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+    include layout.jade
+        block content
+            div.divlist
+                ul
+                    li.menu
+                        | Фото
+                        ul.submenu
+                            li.subhover 2013
+                            li.subhover 2014
+                            li#year2015.subhover 2015
+                            li.subhover 2016
+                    li.menu
+                        | Відео
+                        ul.submenu
+                            li.subhover 2013
+                            li.subhover 2014
+                            li.subhover 2015
+                            li.subhover 2016
+                    li.menu
+                        | Цікаве відео з інтернету
+                        ul.submenu
+                            li.subhover 2013
+                            li.subhover 2014
+                            li.subhover 2015
+                            li.subhover 2016
+            script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+            script.
+                $(document).ready(function(){
+                    $("#pike").click(function(){
+                        $("#div1").load("content/pike.txt");
+                    });
+                    $("#perch").click(function(){
+                        $("#div1").load("content/perch.txt");
+                    });
+                    $("#sudak").click(function(){
+                        $("#div1").load("content/sudak.txt");
+                    });
+                    $("#golavl").click(function(){
+                        $("#div1").load("content/golavl.txt");
+                    });
+                    $("#nalym").click(function(){
+                        $("#div1").load("content/nalym.txt");
+                    });
+                    $("#zherekh").click(function(){
+                        $("#div1").load("content/zherekh.txt");
+                    });
+                });
+            script(type='text/javascript', src='js/all_river_gallery.js')
+            script(type='text/javascript', src='js/jquery.magnific-popup.js')
+            #div1.div1
+            include footer
+

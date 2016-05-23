@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+#list {
+    display: none;
+}
+
+
+.allweather {
+    border-radius: 15px;
+    margin-top: 30px;
+    background-image: url(../images/gray.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    display: block;
+    height: 530px;
+    width: 500px;
+    margin-left:60px;
+}
+#weatherTable5,
+#weatherTable16 {
+    color: white;
+    width: 100%;
+}
+.input-container {
+    background-image: url(../images/trans.png);
+}
+
+#weather5 {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    border-radius: 4px;
+}
+#weather5 ul {
+    position: relative;
+    margin: 0;
+    padding-top: 5px;
+    height: 445px;
+    list-style: none;
+    float: left;
+}
+#weather5 ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 40px;
+    padding: 0;
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    line-height: 20px;
+}
+.icon5 {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.icon16 {
+    margin-top: 3%;
+    margin-left: 15%;}
+a.control_prev,
+a.control_next {
+    position: absolute;
+    top: 35%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    text-decoration: none;
+    opacity: 0.8;
+    cursor: pointer;
+}
+a.control_prev:hover,
+a.control_next:hover {
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+}
+a.control_next {
+    right: 0;
+}
+.slider_option {
+    position: relative;
+    margin: 10px auto;
+    width: 160px;
+    font-size: 18px;
+}
+#weather16 {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    border-radius: 4px;
+}
+#weather16 ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 450px;
+    list-style: none;
+    float: left;
+}
+#weather16 ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-left: 40px;
+    padding: 0;
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    line-height: 20px;
+}
+#city {
+    text-align:center;
+color:white;
+height:30px;
+font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:18px;
+font-weight:900;
+}
+#btnGetWeather16,
+#btnGetWeather5 {
+    border-radius: 30px;
+    width: 75px;
+    height: 25px;
+    color: #363636;
+    font-weight: bold;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#inputCityName16,
+#inputCityName5 {
+    border-radius: 30px;
+    border: 3px solid gray;
+    width: 50%;
+    height: 20px;
+    background-color: #3C3C3C;
+    color: white;
+    text-align: center;
+}
+input {
+    color: white;
+    font-weight: bold;
+}
+label {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    padding-left: 10px;
+}
+.temp {
+    padding-left: 3px;
+    color: orange;
+}
+.percent {
+    padding-left: 3px;
+    color: cyan;
+}
+.preasure {
+    padding-left: 3px;
+    color: lightblue;
+}
+.date {
+    color: #00BBF4;
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+}
+.date5 {
+    color: #00BBF4;
+    font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-weight: 900;
+    font-size: 18px;
+}
+p {
+    color: white;
+    font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+    font-weight: 900;
+    font-size: 14px;
+}
+.description {
+    color: yellow;
+}

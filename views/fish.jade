@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Рибалка у Львові
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(rel='shortcut icon', href='images/favicon.jpg')
+        link(href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+    include layout.jade
+        block content
+            div
+                span.choose Оберіть вид риболовлі яка вас цікавить
+            div
+                section.section(onclick="window.location ='peacefull';")
+                    img.button1(src='images/35567689.png', alt='Мирна риба')
+                section.section(onclick="window.location ='predators';")
+                    img.button2(src='images/na_glavnuju_stranicu.png', alt='Щука')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+        script(type='text/javascript', src='js/sitedrive.js')
+        include footer

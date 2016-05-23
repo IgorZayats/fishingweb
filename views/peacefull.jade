@@ -1,0 +1,113 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Рибалка у Львові
+        link(href='css/main.css', rel='stylesheet', type='text/css')
+        link(href='css/sort-of-fish.css', rel='stylesheet', type='text/css')
+        link(rel='shortcut icon', href='images/favicon.jpg')
+        link(href='https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+
+    include layout.jade
+        block content
+            .divlist
+                ul
+                    li.menu
+                        | Сазан
+                        ul.submenu
+                            li#sazan.subhover Про рибу
+                            li#sposobu-sazan.subhover Способи ловлі
+                            li#osnastka-sazan.subhover Оснастки
+                            li#video-sazan.subhover Відео
+                    li.menu
+                        | Карась
+                        ul.submenu
+                            li#karas.subhover Про рибу
+                            li.subhover Способи ловлі
+                            li.subhover 2.3
+                            li.subhover 2.4
+                            li.subhover 2.5
+                    li.menu
+                        | Плотва
+                        ul.submenu
+                            li#plotva.subhover Про рибу
+                            li.subhover Способи ловлі
+                            li.subhover 3.3
+                            li.subhover 3.4
+                            li.subhover 3.5
+                    li.menu
+                        | Лин
+                        ul.submenu
+                            li#lin.subhover Про рибу
+                            li.subhover Способи ловлі
+                            li.subhover 4.3
+                            li.subhover 4.4
+                            li.subhover 4.5
+                    li#krasnopirka.menu
+                        | Краснопірка
+                        ul.submenu
+                            li.subhover Про рибу
+                            li.subhover Способи ловлі
+                            li.subhover 5.3
+                            li.subhover 5.4
+                            li.subhover 5.5
+                    li#verhovodka.menu
+                        | Верховодка
+                        ul.submenu
+                            li.subhover Про рибу
+                            li.subhover Способи ловлі
+                            li.subhover 6.3
+                            li.subhover 6.4
+                            li.subhover 6.5
+                    li#tovstolobuk.menu
+                        | Товстолобик
+                        ul.submenu
+                            li.subhover Про рибу
+                            li.subhover Способи ловлі
+                            li.subhover 7.3
+                            li.subhover 7.4
+                            li.subhover 7.5
+                    li#lyashch.menu
+                        | Лящ
+                        ul.submenu
+                            li.subhover Про рибу
+                            li.subhover Способи ловлі
+                            li.subhover 8.3
+                            li.subhover 8.4
+                            li.subhover 8.5
+            script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+            script.
+                $(document).ready(function(){
+                    $("#sazan").click(function(){
+                        $("#div1").load("content/carp.txt");
+                    });
+                    $("#karas").click(function(){
+                        $("#div1").load("content/karas.txt");
+                    });
+                    $("#plotva").click(function(){
+                        $("#div1").load("content/plotva.txt");
+                    });
+                    $("#lin").click(function(){
+                        $("#div1").load("content/lin.txt");
+                    });
+                    $("#krasnopirka").click(function(){
+                        $("#div1").load("content/krasnopirka.txt");
+                    });
+                    $("#verhovodka").click(function(){
+                        $("#div1").load("content/verhovodka.txt");
+                    });
+                    $("#tovstolobuk").click(function(){
+                        $("#div1").load("content/tovstolobuk.txt");
+                    });
+                    $("#lyashch").click(function(){
+                        $("#div1").load("content/lyashch.txt");
+                    });
+                    $("#sposobu-sazan").click(function(){
+                        $("#div1").load("content/how-to-fish/karp-sposobu.txt");
+                    });
+                    $("#video-sazan").click(function(){
+                        $("#div1").load("content/videolink/carp.txt");
+                    });
+                });
+            #div1.div1
+            include footer
